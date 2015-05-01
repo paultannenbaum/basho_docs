@@ -87,7 +87,7 @@ set :markdown, :fenced_code_blocks => true,
 
 use Rack::Middleman::VersionRouter
 
-activate :faqml
+# activate :faqml
 activate :versionify
 activate :i18n, :langs => [I18n.locale]
 activate :cache_buster

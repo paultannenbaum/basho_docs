@@ -1,13 +1,14 @@
 source "https://rubygems.org"
 
-gem "middleman", "=3.0.6"
+gem "middleman", "~>3.0.14"
 gem "middleman-smusher"
-gem "middleman-faqml", "~> 0.3.0"
+#gem "faqml", :git => "git@github.com:dmitrizagidulin/fml.git" # ">= 0.3.2"  #
+#gem "middleman-faqml", :git => "git@github.com:dmitrizagidulin/middleman-faqml.git" #"~> 0.3.0"
 gem "middleman-aws-deploy", "~> 0.5.0"
 gem "redcarpet", "~>2.1.1"
 gem "github-markdown", "~>0.5.1"
 gem "org-ruby", "~>0.7.2"
-gem "slim", "~>1.2.2"
+gem "slim", "~>1.3.9"
 gem "rocco", "=0.8.2"
 gem "versionomy", "~>0.4.4"
 gem "coderay", "=1.1.0"
