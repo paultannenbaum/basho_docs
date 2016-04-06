@@ -196,6 +196,24 @@ You could also try the original write again. Failures may be transitory when ser
 * Writes will assume that columns are in the same order they've been declared in the table.
 * Timestamps should be in Unix epoch/UTC milliseconds.
 
+###Tuning batches
+
+As of Riak TS 1.3, batches of data from a single write are packaged
+for delivery to each destination server as a performance
+optimization. For Riak Enterprise customers using MDC, those batches
+are sent to the remote cluster via realtime sync.
+
+It is possible to specify an approximate largest batch size for tuning
+purposes. By default, batches have a soft cap size of 1MB of data,
+which we've found to be a reasonable size to avoid network congestion.
+
+If you want to adjust that value, the configuration parameter
+`timeseries_max_batch_size` under `riak_kv` in `advanced.config` can
+be defined. The value is in bytes.
+
+See *XXX: not sure how to properly insert this URL*
+http://stage.docs.basho.com/riak/kv/2.1.3/configuring/reference/#Advanced-Configuration
+for more details on the `advanced.config` configuration file.
 
 ##Deleting Data
 
